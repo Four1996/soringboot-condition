@@ -19,7 +19,7 @@ import java.util.Map;
 public class ClassCondition implements Condition {
     /*** 
      * @description:  conditionContext:上下文对象。用于获取环境，IOC容器，ClassLoader对象
-     * annotatedTypeMetadata:注解的源对象。可以用于获取注解定义的属性值
+     * annotatedTypeMetadata:注解的元对象。可以用于获取注解定义的属性值
      
      * @return: boolean
      * @author: panhao
@@ -40,7 +40,7 @@ public class ClassCondition implements Condition {
         //     return false;
         // }
 
-        //2.需求：导入通过注解属性值value指定坐标后创建bean
+        //2.需求：导入通过注解属性值value来指定坐标后创建bean
         //获取注解属性值value
         Map<String, Object> map = annotatedTypeMetadata.getAnnotationAttributes(ConditionOnClass.class.getName());
         // System.out.println(map);
